@@ -670,7 +670,7 @@ async def scrape_xianyu(task_config: dict, debug_limit: int = 0):
 
             # --- 新增：检查是否存在验证弹窗 ---
             baxia_dialog = page.locator("div.baxia-dialog-mask")
-            if await baxia_dialog.is_visible(timeout=2000): # 短暂等待检查
+            if await baxia_dialog.is_visible(): # 短暂等待检查
                 print("\n==================== CRITICAL BLOCK DETECTED ====================")
                 print("检测到闲鱼反爬虫验证弹窗 (baxia-dialog)，无法继续操作。")
                 print("这通常是因为操作过于频繁或被识别为机器人。")
