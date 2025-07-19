@@ -10,3 +10,4 @@ services:
       - ./runtime/xianyu_state.json:/app/xianyu_state.json
       - ./runtime/config.json:/app/config.json
       - ./runtime/prompts:/app/prompts
+      - ./runtime:/app/data
