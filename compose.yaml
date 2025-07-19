@@ -1,0 +1,12 @@
+services:
+  goofish-monitor:
+    build:
+      context: .
+      dockerfile: Containerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./runtime/.env:/app/.env
+      - ./runtime/xianyu_state.json:/app/xianyu_state.json
+      - ./runtime/config.json:/app/config.json
+      - ./runtime/prompts:/app/prompts
