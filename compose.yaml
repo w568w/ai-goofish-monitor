@@ -11,3 +11,7 @@ services:
       - ./runtime/config.json:/app/config.json
       - ./runtime/prompts:/app/prompts
       - ./runtime:/app/data
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
